@@ -1,0 +1,41 @@
+.card:hover {
+    .play-button {
+        opacity: 1;
+    }
+    background-color: #1f1f1f;
+    border-radius: 6px;
+}
+.search-box:hover {
+    border: 1px solid #373737;
+}
+.home-button:hover {
+    transform: scale(1.05);
+}
+.play-button:hover {
+    background-color: #1fdf64;
+    transform: scale(1.05);
+}
+.lst:hover::before {
+    opacity: 0;
+}
+.playlist ul li:hover {
+    background-color: #373737;
+    border-radius: 4px;
+
+    img {
+        opacity: 1;
+    }
+}
+.playlist ul li.playing, .playlist ul li.playing:hover {
+    background-color: #373737;
+    border-radius: 4px;
+}
+
+.song-buttons > img:active {
+    transform: scale(1.05);
+}
+
+.feedback:hover {
+    color: white;
+}
+

@@ -1,0 +1,342 @@
+<!-- xmlns="http://www.w3.org/2000/svg" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Web Player</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utility.css">
+    <link rel="stylesheet" href="animation.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="scrollbar.css">
+</head>
+<body>
+    <div class="wrapper bg-black flex-col">
+        <div class="header">
+            <div class="hamburger">
+                <img class="invert" src="icons/hamburger.svg" alt="logo">
+            </div>
+            <div class="left-header">
+                <img class="invert" src="icons/logo.svg" alt="logo">
+            </div>
+            <div class="right-header">
+                <div class="home-search flex align-center">
+                    <a href="index.html">
+                        <div class="home-button bg-grey">
+                            <img class="home-icon invert" src="icons/home.svg" alt="home" title="Home">
+                        </div>
+                    </a>
+                    <div class="search-box bg-grey">
+                        <label for="search">
+                            <img class="invert" src="icons/search.svg" alt="search" title="Search">
+                        </label>
+                        <input type="text" id="search" placeholder="What do you want to play?">
+                        <div class="line"></div>
+                        <img class="invert" src="icons/browse.svg" alt="mic" title="Browse">
+                    </div>
+                </div>
+                
+                <div class="anchor-tags">
+                    <div><a href="#premium"><span>Premium</span></a></div>
+                    <div><a href="#support"><span>Support</span></a></div>
+                    <div><a href="#download"><span>Download</span></a></div>
+                    <div class="divider"></div>
+                </div>
+                
+                <div class="buttons flex align-center">
+                    <button class="sign-up">Sign up</button>
+                    <button class="log-in">Log in</button>
+                </div>
+            </div> 
+        </div>
+        <div class="container border bg-black flex">
+            <div class="sidebar border bg-dark-grey">
+                <div class="library-logo">
+                    <img class="invert" src="icons/library.svg" alt="icon"></li>
+                    <h2>Your Library</h2>
+                    <div class="hamburger-close">
+                        <img class="invert" src="icons/close.svg" alt="icon"></li>
+                    </div>
+                </div>
+                <div class="playlist-heading">
+                    <div class="title-box flex">
+                        <div class="num-header">#</div>
+                        <div>Title</div>
+                    </div>
+                    <div class="artist-header">Artist</div>
+                    <div class="duration-header"><img class="invert" src="icons/duration.svg" title="Duration"></div>
+                </div>
+                <div class="playlist">
+                    <ul></ul>
+                </div>
+                <div class="footer">
+                    <div><a href="#legal"><span>Legal</span></a></div>
+                    <div><a href="#safetyandprivacy"><span>Safety & Privacy Center</span></a></div>
+                    <div><a href="#privacy-policy"><span>Privacy Policy</span></a></div>
+                    <div><a href="#cookies-policy"><span>Cookies</span></a></div>
+                    <div><a href="#privacy-policy"><span>About Ads</span></a></div>
+                    <div><a href="#accessibility"><span>Accessibility</span></a></div>
+                </div>
+            </div>
+            <div class="home border bg-dark-grey">
+                <div class="cards-row">
+                    <h1>Popular artists</h1>
+                    <div class="card-container">
+                        <a href="https://open.spotify.com/artist/1Xyo4u8uXC1ZmMpatF05PJ?si=CVYGZCOCQjaFS5w8m_Gnzg" target="_blank">
+                            <div class="card border">
+                                <div class="play-button flex align-center justify-center">
+                                    <div class="circle">
+                                        <img src="icons/play.svg" alt="play">
+                                    </div>
+                                </div>
+                                <img class="rounded" src="https://i.scdn.co/image/ab676161000051749e528993a2820267b97f6aae" alt="artist">
+                                <h3>The Weeknd</h3>
+                                <p>Artist</p>
+                            </div>
+                        </a>
+                        <a href="https://open.spotify.com/artist/1wRPtKGflJrBx9BmLsSwlU?si=56jPIqapRFe_mVBvLsiylg" target="_blank">
+                            <div class="card border">
+                                <div class="play-button flex align-center justify-center">
+                                    <div class="circle">
+                                        <img src="icons/play.svg" alt="play">
+                                    </div>
+                                </div>
+                                <img class="rounded" src="https://i.scdn.co/image/ab67616100005174cb6926f44f620555ba444fca" alt="artist">
+                                <h3>Pritam</h3>
+                                <p>Artist</p>
+                            </div>
+                        </a>
+                        <a href="https://open.spotify.com/artist/6eUKZXaKkcviH0Ku9w2n3V?si=szkfUGuGT-6MHmsvy7Zlow" target="_blank">
+                            <div class="card border">
+                                <div class="play-button flex align-center justify-center">
+                                    <div class="circle">
+                                        <img src="icons/play.svg" alt="play">
+                                    </div>
+                                </div>
+                                <img class="rounded" src="https://i.scdn.co/image/ab67616100005174784daff754ecfe0464ddbeb9" alt="artist">
+                                <h3>Ed Sheeran</h3>
+                                <p>Artist</p>
+                            </div>
+                        </a>
+                        <a href="https://open.spotify.com/artist/4gzpq5DPGxSnKTe4SA8HAU?si=jA-A4QFZTvWOkEUC0qJ89w" target="_blank">
+                            <div class="card border">
+                                <div class="play-button flex align-center justify-center">
+                                    <div class="circle">
+                                        <img src="icons/play.svg" alt="play">
+                                    </div>
+                                </div>
+                                <img class="rounded" src="https://i.scdn.co/image/ab676161000051741ba8fc5f5c73e7e9313cc6eb" alt="artist">
+                                <h3>Coldplay</h3>
+                                <p>Artist</p>
+                            </div>
+                        </a>
+                        <a href="https://open.spotify.com/artist/0tC995Rfn9k2l7nqgCZsV7?si=5ZyFPU_AQwqn9FPyRYJ_Rw" target="_blank">
+                            <div class="card border">
+                                <div class="play-button flex align-center justify-center">
+                                    <div class="circle">
+                                        <img src="icons/play.svg" alt="play">
+                                    </div>
+                                </div>
+                                <img class="rounded" src="https://i.scdn.co/image/ab67616100005174284fbc05b35f3a52501ba30a" alt="artist">
+                                <h3>Prateek Kuhad</h3>
+                                <p>Artist</p>
+                            </div>
+                        </a>
+                        <a href="https://open.spotify.com/artist/4AK6F7OLvEQ5QYCBNiQWHq?si=iPmQkiHUSaSU9TvbyDGFYA" target="_blank">
+                            <div class="card border">
+                                <div class="play-button flex align-center justify-center">
+                                    <div class="circle">
+                                        <img src="icons/play.svg" alt="play">
+                                    </div>
+                                </div>
+                                <img class="rounded" src="https://i.scdn.co/image/45741ba38b51130bb96e00c0e24d17ba311a9293" alt="artist">
+                                <h3>One Direction</h3>
+                                <p>Artist</p>
+                            </div>
+                        </a>
+                        
+                    </div>
+                </div>
+                <div class="cards-row">
+                    <h1>Popular albums</h1>
+                    <div class="card-container">
+                        <div class="card border">
+                            <div class="play-button flex align-center justify-center">
+                                <div class="circle">
+                                    <img src="icons/play.svg" alt="play">
+                                </div>
+                            </div>
+                            <img src="https://i.scdn.co/image/ab67616d00001e027e7f1d0bdb2bb5a2afc4fb25" alt="album">
+                            <h3>Hurry Up Tomorrow</h3>
+                            <p>The Weeknd</p>
+                        </div>
+                        <div class="card border">
+                            <div class="play-button flex align-center justify-center">
+                                <div class="circle">
+                                    <img src="icons/play.svg" alt="play">
+                                </div>
+                            </div>
+                            <img src="https://i.scdn.co/image/ab67616d00001e02e62ca3548e739bd85eebbbc9" alt="album">
+                            <h3>G.O.A.T.</h3>
+                            <p>Diljit Dosanjh</p>
+                        </div>
+                        <div class="card border">
+                            <div class="play-button flex align-center justify-center">
+                                <div class="circle">
+                                    <img src="icons/play.svg" alt="play">
+                                </div>
+                            </div>
+                            <img src="https://i.scdn.co/image/ab67616d00001e02aad3f4b601ae8763b3fc4e88" alt="album">
+                            <h3>Glory</h3>
+                            <p>Yo Yo Honey Singh</p>
+                        </div>
+                        <div class="card border">
+                            <div class="play-button flex align-center justify-center">
+                                <div class="circle">
+                                    <img src="icons/play.svg" alt="play">
+                                </div>
+                            </div>
+                            <img src="https://i.scdn.co/image/ab67616d00001e02707ea5b8023ac77d31756ed4" alt="album">
+                            <h3>Yeh Jawaani Hai Deewani</h3>
+                            <p>Pritam</p>
+                        </div>
+                        <div class="card border">
+                            <div class="play-button flex align-center justify-center">
+                                <div class="circle">
+                                    <img src="icons/play.svg" alt="play">
+                                </div>
+                            </div>
+                            <img src="https://i.scdn.co/image/ab67616d00001e026ed9aef791159496b286179f" alt="album">
+                            <h3>METRO BOOMIN PRESENTS SPIDER-MAN: ACROSS THE SPIDER-VERSE (SOUNDTRACK FROM AND INSPIRED BY THE MOTION PICTURE)</h3>
+                            <p>Metro Boomin</p>
+                        </div>
+                        <div class="card border">
+                            <div class="play-button flex align-center justify-center">
+                                <div class="circle">
+                                    <img src="icons/play.svg" alt="play">
+                                </div>
+                            </div>
+                            <img src="https://i.scdn.co/image/ab67616d00001e0279f4a87c23143f0abb14c279" alt="album">
+                            <h3>Mismatched: Season 3 (Soundtrack from the Netflix Series)</h3>
+                            <p>Mismatched - Cast</p>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="cards-row">
+                    <h1>Featured Charts</h1>
+                    <div class="card-container">
+                        <div class="card border no-display">
+                            <div class="play-button flex align-center justify-center">
+                                <div class="circle">
+                                    <img src="icons/play.svg" alt="play">
+                                </div>
+                            </div>
+                            <img src="https://charts-images.scdn.co/assets/locale_en/regional/weekly/region_global_default.jpg" alt="album">
+                            <h3>Top Songs - Global</h3>
+                            <p>Your weekly update of the most played tracks right now - Global.</p>
+                        </div>
+                        <div class="card border no-display">
+                            <div class="play-button flex align-center justify-center">
+                                <div class="circle">
+                                    <img src="icons/play.svg" alt="play">
+                                </div>
+                            </div>
+                            <img src="https://charts-images.scdn.co/assets/locale_en/regional/weekly/region_in_default.jpg" alt="album">
+                            <h3>Top Songs - India</h3>
+                            <p>Your weekly update of the most played tracks right now - India.</p>
+                        </div>
+                        <div class="card border no-display">
+                            <div class="play-button flex align-center justify-center">
+                                <div class="circle">
+                                    <img src="icons/play.svg" alt="play">
+                                </div>
+                            </div>
+                            <img src="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_global_default.jpg" alt="album">
+                            <h3>Top 50 - Global</h3>
+                            <p>Your daily update of the most played tracks right now - Global.</p>
+                        </div>
+                        <div class="card border no-display">
+                            <div class="play-button flex align-center justify-center">
+                                <div class="circle">
+                                    <img src="icons/play.svg" alt="play">
+                                </div>
+                            </div>
+                            <img src="https://charts-images.scdn.co/assets/locale_en/regional/daily/region_in_default.jpg" alt="album">
+                            <h3>Top 50 - India</h3>
+                            <p>Your daily update of the most played tracks right now - India.</p>
+                        </div>
+                        <div class="card border no-display">
+                            <div class="play-button flex align-center justify-center">
+                                <div class="circle">
+                                    <img src="icons/play.svg" alt="play">
+                                </div>
+                            </div>
+                            <img src="https://charts-images.scdn.co/assets/locale_en/viral/daily/region_global_default.jpg" alt="album">
+                            <h3>Viral 50 - Global</h3>
+                            <p>Your daily update of the most viral tracks right now - Global.</p>
+                        </div>
+                        <div class="card border no-display">
+                            <div class="play-button flex align-center justify-center">
+                                <div class="circle">
+                                    <img src="icons/play.svg" alt="play">
+                                </div>
+                            </div>
+                            <img src="https://charts-images.scdn.co/assets/locale_en/viral/daily/region_in_default.jpg" alt="album">
+                            <h3>Viral 50 - India</h3>
+                            <p>Your daily update of the most viral tracks right now - India.</p>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="trademark">
+                    <p>Spotify Clone by Shobhit</p>
+                    <a class="feedback" href="https://mail.google.com/mail/?view=cm&fs=1&to=shobhit.productive@gmail.com" target="_blank"><span class="feedback">Support / Feedback</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="playbar">
+        <div class="left">
+            <div class="description">
+
+            </div>
+        </div>
+        <div class="mid flex align-center justify-center">
+            <div class="song-buttons">
+                <img id="shuffle" class="invert" src="icons/shuffle.svg" alt="shuffle" title="Shuffle">
+
+                <img id="previous" class="invert" src = "icons/previous.svg" alt="previous" title="Previous">
+
+                <div id="play_pause">
+                    <img id="play_icon" src = "icons/play.svg" alt="play" title="Play">
+                </div>
+                
+                <img id="next" class=" invert" src = "icons/next.svg" alt="next" title="Next">
+
+                <img id="repeat" class="invert" src="icons/repeat.svg" alt="repeat" title="Repeat">
+            </div>
+            <div class="seekbar-box">
+                <div class="current-time">
+                </div>
+                <div class="seekbar">
+                    <div class="pointer"></div>
+                </div>
+                <div class="overall-time"></div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="volume-controls">
+                <img id="volume" class="invert" src="icons/volume.svg" alt="volume">
+                <div class="range">
+                    <input type="range" name="volume" id="volume">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+@media (max-width: 1200px) {
+    .sidebar {
+        position: absolute;
+        left: -200%;
+        transition: all 0.3s ease-out;
+        z-index: 1;
+        width: 350px;
+    }
+
+    .home {
+        width: 100vw;
+    }
+    .container {
+        width: 100vw;
+    }
+    .playbar {
+        flex-direction: column;
+        position: fixed;
+        z-index: 2;
+        height: 16vh;
+
+        .description {
+            width: 60vw;
+            padding: 5px 10px;
+            padding-top: 10px;
+            text-align: center; 
+        }
+        .mid {
+            width: 100vw;
+            position: fixed;
+            bottom: 0;
+            z-index: 2;
+            background-color: black;
+            height: 60px;
+        }
+        .seekbar-box {
+            margin-bottom: 1.5rem;
+        }
+        .volume-controls {
+            position: absolute;
+            right: 25px;
+            top: 15%;
+            transform: translateY(-50%);
+        }
+    }
+    
+    .header {
+        display: flex;
+        align-items: center;
+        height: 8vh; 
+        position: relative;
+    }
+    .header .left-header img {
+        position: absolute;
+        right: 5%;
+        bottom: 25%;
+    }
+    .header .right-header {
+        display: none; 
+    }
+    .hamburger {
+        display: block;
+        position: absolute;
+        left: 15px;
+            img {
+                height: 25px;
+                width: 25px;
+                padding: 0px 5px;
+                padding-top: 5px;
+            }
+    }
+    .hamburger-close {
+        display: block;
+        right: 20px;
+        padding-top: 5px;
+        position: absolute;
+
+        img {
+            height: 20px;
+            width: 20px;
+        }
+    }
+    .trademark {
+        display: flex;
+        gap: 12px;
+        padding-bottom: 3rem;
+        flex-wrap: wrap;
+    }
+
+}
+
+@media (max-width: 1500px) and (min-width: 1200px) {    /* Because of overflowing */
+    .duration-header, .song-duration {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .volume-controls {
+        flex-direction: column-reverse;
+        img {
+            margin-bottom: 140px;
+        }
+    }
+    .range {
+        opacity: 0;
+    }
+    .volume-controls:hover {
+        .range {
+            opacity: 1;
+        }
+    }
+    input[type="range"] {
+        direction: rtl;
+        writing-mode: vertical-lr; /* Makes the slider vertical (bottom to top) */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 80%;
+    }
+}
+

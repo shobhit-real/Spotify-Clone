@@ -1,0 +1,54 @@
+.border {
+    margin: 0px 4px;
+    border-radius: 10px;
+}
+.flex {
+    display: flex;
+}
+.flex-col {
+    flex-direction: column;
+}
+.justify-center {
+    justify-content: center;
+}
+.align-center {
+    align-items: center;
+}
+.bg-black {
+    background-color: black;
+    color: white;
+}
+.bg-grey {
+    background-color: #1f1f1f;
+    color: white;
+}
+.bg-dark-grey {
+    background-color: #121212;
+    color: white;
+}
+.invert {
+    filter: invert(1);
+}
+.rounded {
+    border-radius: 50%;
+}
+.no-display {
+    h3{
+        display: none;
+    }
+    div + img {
+        margin-bottom: 7px;
+    }
+}
+
+/* To overwrite list-style because of display : flex */
+body {
+    counter-reset: section;
+}
+.lst:before {
+    counter-increment: section;
+    content: counter(section) "";
+    position: relative;
+    margin-left: 1.2rem;
+    margin-top: 0.75rem;
+}
