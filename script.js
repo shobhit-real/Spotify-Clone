@@ -8,7 +8,7 @@ async function fetchData() {
     try {
         const res = await fetch('/songs/songs.json');
         if (!res.ok) throw new Error('Could not load songs.json');
-        const songs = await res.json();
+        songs = await res.json();
         return songs;
     } catch (err) {
         console.error('Error loading songs:', err);
@@ -145,7 +145,7 @@ async function main() {
 
     // Previous button 
     previous.addEventListener('click', () => {
-        let curr = current_song.src.split('/').slice(-1)[0]
+        let curr = decodeURIComponent(current_song.src.split('/').slice(-1)[0]);
         let index = songs.indexOf(curr)
         if(index-1 >= 0) {
             playMusic(songs[index-1])
@@ -154,23 +154,27 @@ async function main() {
 
     // Next button
     next.addEventListener('click', () => {
-        let curr = current_song.src.split('/').slice(-1)[0]
-        let index = songs.indexOf(curr)
-        if (shuffleEnabled) {
-            let randomIndex;
-            do {
-                randomIndex = Math.floor(Math.random() * songs.length);
-            } while (randomIndex === index); // Ensure it doesn't repeat the same song
-    
-            playMusic(songs[randomIndex]);
-        } 
-        else {
-            if (index + 1 < songs.length) {
-                playMusic(songs[index + 1]);
-            }
+    let curr = decodeURIComponent(current_song.src.split('/').slice(-1)[0]);
+    let index = songs.indexOf(curr);
+    console.log('Next button clicked');
+    console.log('Current song:', curr);
+    console.log('Index in songs list:', index);
+    console.log('Songs list:', songs);
+
+    if (shuffleEnabled) {
+        let randomIndex;
+        do {
+            randomIndex = Math.floor(Math.random() * songs.length);
+        } while (randomIndex === index);
+        playMusic(songs[randomIndex]);
+    } else {
+        if (index + 1 < songs.length) {
+            playMusic(songs[index + 1]);
+        } else {
+            console.log('Reached end of playlist, nothing to play.');
         }
-        
-    })
+    }
+});
 
     // Volume Mixer
     document.querySelector('.range').getElementsByTagName('input')[0].addEventListener('change', (x) => {
@@ -190,7 +194,7 @@ async function main() {
             current_song.play(); // Play again
         } else {
             // Normal next song logic
-            let curr = current_song.src.split('/').slice(-1)[0];
+            let curr = decodeURIComponent(current_song.src.split('/').slice(-1)[0]);
             let index = songs.indexOf(curr);
             if (index + 1 < songs.length) {
                 playMusic(songs[index + 1]);
