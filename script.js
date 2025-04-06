@@ -5,20 +5,15 @@ let repeatEnabled = false; // Flag to track repeat mode
 const repeatElement = document.getElementById('repeat');
 
 async function fetchData() {
-    const data = await fetch('http://127.0.0.1:3000/songs/');
-    const response = await data.text();
-
-    const div = document.createElement('div');
-    div.innerHTML = response;
-    let a = div.getElementsByTagName('a');
-    let songs = [];
-    for (let i = 0; i < a.length; ++i) {
-        const item = a[i];  
-        if(item.href.endsWith('.mp3')) {
-            songs.push(item.href.split('/songs/')[1]);
-        }
+    try {
+        const res = await fetch('/songs/songs.json');
+        if (!res.ok) throw new Error('Could not load songs.json');
+        const songs = await res.json();
+        return songs;
+    } catch (err) {
+        console.error('Error loading songs:', err);
+        return [];
     }
-    return songs;
 }
 fetchData();
 
