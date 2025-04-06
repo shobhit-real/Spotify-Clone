@@ -86,7 +86,7 @@ async function main() {
         songUL.appendChild(li);
 
         // Load the audio file to get its duration
-        let audio = new Audio(`http://127.0.0.1:3000/songs/${song}`);
+        let audio = new Audio(`/songs/${song}`);
         audio.addEventListener('loadedmetadata', () => {
             let duration = formatDuration(audio.duration);
             li.querySelector('.song-duration').textContent = duration;
