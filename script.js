@@ -147,19 +147,15 @@ async function main() {
     previous.addEventListener('click', () => {
         let curr = decodeURIComponent(current_song.src.split('/').slice(-1)[0]);
         let index = songs.indexOf(curr)
-        if(index-1 >= 0) {
-            playMusic(songs[index-1])
-        }
+        
+        let prevIndex = (index - 1 + songs.length) % songs.length; // 👈 wrap to last if index is 0
+        playMusic(songs[prevIndex]);
     })
 
     // Next button
     next.addEventListener('click', () => {
     let curr = decodeURIComponent(current_song.src.split('/').slice(-1)[0]);
     let index = songs.indexOf(curr);
-    console.log('Next button clicked');
-    console.log('Current song:', curr);
-    console.log('Index in songs list:', index);
-    console.log('Songs list:', songs);
 
     if (shuffleEnabled) {
         let randomIndex;
@@ -171,7 +167,8 @@ async function main() {
         if (index + 1 < songs.length) {
             playMusic(songs[index + 1]);
         } else {
-            console.log('Reached end of playlist, nothing to play.');
+            let nextIndex = (index + 1) % songs.length; // wrapping around to first
+            playMusic(songs[nextIndex]);
         }
     }
 });
