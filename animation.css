@@ -39,3 +39,21 @@
     color: white;
 }
 
+.anchor-tags span:hover {
+    color: white;
+}
+
+.buttons .sign-up:hover {
+    transform: scale(1.05);
+    color: white;
+}
+.buttons .log-in:hover {
+    transform: scale(1.05);
+    background-color: whitesmoke;
+}
+.card h3:hover {
+    text-decoration: underline;
+}
+.cards-row:nth-child(2) p:hover {
+    text-decoration: underline;
+}
